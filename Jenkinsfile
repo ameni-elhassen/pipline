@@ -1,14 +1,15 @@
 pipeline {
+    environment {
+        CI = 'true'
+        PATH = "C:\\WINDOWS\\SYSTEM32"
+    }
     agent {
         docker {
             image 'node:6-alpine'
             args '-p 3000:3000'
         }
     }
-    environment {
-        CI = 'true'
-        PATH = "C:\\WINDOWS\\SYSTEM32"
-    }
+   
     stages {
         stage('Build') {
             steps {
