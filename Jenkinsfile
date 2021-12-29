@@ -7,6 +7,7 @@ pipeline {
     }
     environment {
         CI = 'true'
+        PATH = "C:\\WINDOWS\\SYSTEM32"
     }
     stages {
         stage('Build') {
